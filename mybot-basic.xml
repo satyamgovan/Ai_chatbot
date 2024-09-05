@@ -1,0 +1,123 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<category>
+        <pattern>MY FAVOURITE CLAN IS *</pattern>
+        <template>
+            <set name="favorite_clan"><star/></set>
+            I like <get name="favorite_clan"/> too.
+        </template>
+    </category>
+    
+<category>
+    <pattern>DO YOU REMEMBER MY FAVOURITE CLAN</pattern>
+    <template>Yes! your favorite clan is <get name="favorite_clan"/></template>.
+</category>
+
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>Hello! How are you?</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+<!-- Logic input -->
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>  
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#32$<star index="1"/> is <star index="2"/></template></category> 
+
+<!-- nauto characters -->
+<category> <pattern> WHO IS NARUTO </pattern>
+  <template> Naruto is a anime character from fictional village called hidden leaf. He is a young ninja and became the 7th hokage.</template> </category>
+
+<category> <pattern> HOW MANY TIMES DID NARUTO FAIL THE GRADUATION TEST FROM THE ACADEMY </pattern>
+  <template> Three </template> </category>
+
+<category> <pattern> WHAT TAIL BEAST DOES NARUTO HAVE </pattern>
+  <template> Nine tail fox named Kurama </template> </category>
+
+<category> <pattern> WHAT IS JUTSU IS NARUTO PROFICIENT WITH </pattern>
+  <template>  Multi-shadow clone jutsu </template> </category>  
+
+<category> <pattern> NARUTO FAVOURITE FOOD </pattern>
+  <template> Ramen </template> </category>  
+
+<category>
+    <pattern> WHICH CLAN IS SASUKE FROM </pattern>
+    <template> Uchiha clan </template>
+</category>  
+ 
+<category> <pattern> WHO IS KAKASHI </pattern>
+  <template> copy ninja the one who copied more than 1000 justus. </template> </category>
+
+<category> <pattern> WHO IS JIRAIYA </pattern>
+  <template> He is a one of the legendary sanin who was also a student of third hokage. </template> </category>  
+  
+<category> <pattern> WHO IS YELLOW FLASH </pattern>
+  <template> Minato Uzumaki </template> </category> 
+
+<category> <pattern> TELL ME WHO IS MY FAVOURITE CHARACTER </pattern>
+  <template> Your favourite character is Minato Uzumaki </template> </category>   
+  
+<category> <pattern> WHO IS THE BEST GENJUTSU USER </pattern>
+  <template> Itachi </template> </category>  
+
+<!--- Wikipedia API -->
+<category><pattern> WHAT IS A *</pattern>
+  <template>#1$<star index="1"/></template></category>
+
+<category><pattern> WHAT IS AN * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHAT IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHICH CLAN IS * </pattern>
+  <template><srai>WHICH CLAN IS A <star/></srai></template></category>
+
+<category><pattern> DEFINE * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHO IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
